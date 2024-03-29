@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Cards</title>
+    <style>
+        .btn-mod {
+            width: 150px;
+            font-size: 20px;
+            padding: 5px 5px;
+            border: none;
+            border-radius: 30px;
+            background-color: rgb(244, 239, 239);
+            margin: 10px 10px;
+        }
+
+        .activate {
+            box-shadow: 0 0 5px black;
+        }
+
+        .product_text {
+            text-align: center;
+            font-size: 40px;
+            font-family: 'Protest Riot', sans-serif;
+            font-style: oblique;
+        }
+
+        .parent {
+            display: flex;
+            justify-content: space-around;
+            padding-bottom: 50px;
+        }
+
+        .child {
+            border-radius: 10px;
+            width: 280px;
+            overflow: hidden;
+            padding: 5px 7px;
+            margin-top: 60px;
+            box-shadow: 0px 0px 10px black;
+            text-align: center;
+            background-color: rgb(244, 239, 239);
+        }
+
+        .product_img {
+            border-radius: 10px;
+            width: 260px;
+            height: 200px;
+            padding-top: 10px;
+        }
+
+        .product_info {
+            font-size: 15px;
+            font-weight: 200;
+            text-align: justify;
+            padding: 0px 5px;
+        }
+
+        .product-prize {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .quantity-btn-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn-quantity {
+            height: 25px;
+            margin-bottom: 10px;
+        }
+
+        .quantity-text {
+            font-size: 25px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .btn-buy-now {
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            padding: 5px 20px;
+            font-size: 20px;
+        }
+
+        .theme-light {
+            background-color: white;
+            color: black;
+        }
+
+        .theme-dark {
+            background-color: black;
+            color: white;
+        }
+
+        /* Mobile Devices */
+
+        @media screen and (max-width: 768px) {
+            .parent {
+                flex-wrap: wrap;
+                justify-content: space-around;
+
+
+
+            }
+
+            body {
+                background-image: url("./../img/plant.jpg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: max-content;
+
+            }
+
+
+        }
+
+
+        /* Tablet Devices */
+
+        @media screen and (min-width: 769px) and (max-width: 992px) {
+            .parent {
+                flex-wrap: wrap;
+                justify-content: space-around;
+
+
+
+            }
+
+            body {
+                background-image: url("./../img/plant.jpg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: max-content;
+
+            }
+        }
+
+        /* Dekstop device */
+
+        @media screen and (min-width: 993px) and (max-width: 1200px) {
+            .parent {
+                flex-wrap: wrap;
+                justify-content: space-around;
+
+            }
+
+            body {
+                background-image: url("./../img/plant.jpg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: max-content;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="child">
+            <img class="product_img" src="iphone-red-img.webp" alt="iphone-red">
+            <h1 class="product_heading">iphone Red</h1>
+            <p class="product_info">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque quibusdam aliquam,
+                praesentium delectus Repellat ducimus fuga cumque quasi harum.</p>
+            <p class="product-prize">
+                ₹ 70000/-
+            </p>
+            <p id="show-quantity"> 1 * 70000 </p>
+            <p id="show-total">Total 70000</p>
+            <div class="quantity-btn-container">
+                <img src="minus.png" alt="minus" class="btn-quantity" onclick="dec()">
+                <span class="quantity-text" id="quantity-text">1</span>
+                <img src="plus.png" alt="plus" class="btn-quantity" onclick="inc()">
+            </div>
+            <button type="button" class="btn-buy-now">
+                Buy Now
+            </button>
+        </div>
+        <div class="child">
+            <img class="product_img" src="iphone-dark-blue.jpg" alt="iphone-dark-blue">
+            <h1 class="product_heading">iphone Blue</h1>
+            <p class="product_info">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque quibusdam aliquam,
+                praesentium delectus Repellat ducimus fuga cumque quasi harum. </p>
+            <p class="product-prize">
+                ₹ 70000/-
+            </p>
+            <p id="show-quantity"> 1 * 70000 </p>
+            <p id="show-total">Total 70000</p>
+            <div class="quantity-btn-container">
+                <img src="minus.png" alt="minus" class="btn-quantity" onclick="dec()">
+                <span class="quantity-text" id="quantity-text">1</span>
+                <img src="plus.png" alt="plus" class="btn-quantity" onclick="inc()">
+            </div>
+            <button type="button" class="btn-buy-now">
+                Buy Now
+            </button>
+
+        </div>
+        <div class="child">
+            <img class="product_img" src="iphone-black.jpeg" alt="iphone-black">
+            <h1 class="product_heading">iphone Black</h1>
+            <p class="product_info">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque quibusdam aliquam,
+                praesentium delectus Repellat ducimus fuga cumque quasi harum. </p>
+            <p class="product-prize">
+                ₹ 70000/-
+            </p>
+            <p id="show-quantity"> 1 * 70000 </p>
+            <p id="show-total">Total 70000</p>
+            <div class="quantity-btn-container">
+                <img src="minus.png" alt="minus" class="btn-quantity" onclick="dec()">
+                <span class="quantity-text" id="quantity-text">1</span>
+                <img src="plus.png" alt="plus" class="btn-quantity" onclick="inc()">
+            </div>
+            <button type="button" class="btn-buy-now">
+                Buy Now
+            </button>
+        </div>
+        <div class="child">
+            <img class="product_img" src="iphone-white.jpg" alt="iphone-white">
+            <h1 class="product_heading">iphone white</h1>
+            <p class="product_info">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque quibusdam aliquam,
+                praesentium delectus Repellat ducimus fuga cumque quasi harum. </p>
+            <p class="product-prize">
+                ₹ 70000/-
+            </p>
+            <p id="show-quantity"> 1 * 70000 </p>
+            <p id="show-total">Total 70000</p>
+            <div class="quantity-btn-container">
+                <img src="minus.png" alt="minus" class="btn-quantity" onclick="dec()">
+                <span class="quantity-text" id="quantity-text">1</span>
+                <img src="plus.png" alt="plus" class="btn-quantity" onclick="inc()">
+            </div>
+            <button type="button" class="btn-buy-now">
+                Buy Now
+            </button>
+        </div>
+
+        <script>
+            function inc() {
+                const quntityText = document.getElementById('quantity-text');
+                const showQuantity = document.getElementById('show-quantity');
+                const showTotal = document.getElementById('show-total');
+                let quantity = parseInt(quntityText.innerText);
+                if (quantity < 10) {
+                    quntityText.innerText = ++quantity;
+                }
+                else {
+                    alert("you can't add more than 10 items");
+                }
+                showQuantity.innerText = `${quantity} * 70000`;
+                showTotal.innerText = `Total : ${quantity * 70000}`;
+            }
+
+            function dec() {
+                const quntityText = document.getElementById('quantity-text');
+                const showQuantity = document.getElementById('show-quantity');
+                const showTotal = document.getElementById('show-total');
+                let quantity = parseInt(quntityText.innerText);
+                if (quantity > 1) {
+                    quntityText.innerText = --quantity;
+                }
+                else {
+                    alert("you can't add less than 1 items");
+                }
+                showQuantity.innerText = `${quantity} * 70000`;
+            }
+        </script>
+</body>
+
+</html>
